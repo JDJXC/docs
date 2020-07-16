@@ -1,9 +1,15 @@
 
 module.exports = {
-    title:"简单极限",
+    title:"简单极限的vuepress",
     description:"简单极限的笔记",
+    head: [
+      ['meta', { name: 'keywords', content: '简单极限的vuepress' }],
+      ['meta', { name: 'author', content: '简单极限' }],
+      ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ],
     themeConfig: {
-        //导航栏 Logo 有bug
+      lastUpdated: '更新时间',
+        //导航栏 Logo
       logo: '/assets/img/logo1.gif',
       //navbar: false,//来禁用所有页面的导航栏：
       nav: [
@@ -16,7 +22,7 @@ module.exports = {
                     text: '分组1',
                     items: [
                       { text: '主页', link: '/' },
-                      { text: 'Group2', link: '/about'  }
+                      {text: '主页', link: '/'}
                     ]
                   },
                   {
