@@ -1,11 +1,26 @@
+const moment = require('moment');
 
+moment.locale('zh-cn');
 module.exports = {
+    base:"/docs/",
     title:"简单极限的vuepress",
     description:"简单极限的笔记",
     head: [
       ['meta', { name: 'keywords', content: '简单极限的vuepress' }],
       ['meta', { name: 'author', content: '简单极限' }],
       ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ],
+    plugins: [
+      [
+        '@vuepress/last-updated',
+        {
+          transformer: (timestamp) => {
+            // 不要忘了安装 moment
+            
+            return moment(timestamp).format('lll')
+          }
+        }
+      ]
     ],
     themeConfig: {
       lastUpdated: '更新时间',
@@ -37,7 +52,7 @@ module.exports = {
           { text: '其他', link: 'https://google.com' },
       ],
       sidebar: [
-          '',
+          '/',
           '/about',
           {
             title: '美丽的css',   // 必要的
