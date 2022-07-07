@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/JDJXC/docs#readme",
   "dependencies": {
-    "moment": "^2.27.0"
+    "moment": "^2.29.4"
   }
 }
